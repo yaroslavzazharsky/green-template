@@ -1,0 +1,222 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+/*---------Header----------*/
+$headerBg:#96db4c;
+
+.header{
+	background:$headerBg;
+    padding: 1.6rem 1rem;
+    position: absolute;
+    top:0;
+    right: 0;
+    left:0;
+    z-index: 55;
+}
+.header .container{
+	max-width: 990px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+.navigation{
+	order: 3;
+}
+.navigation .button{
+	display: block;
+	height:32px;
+	width:32px;
+	cursor: pointer;
+}
+.navigation .button::before{
+    content:'';
+	display:block;
+	height:4px;
+	background:#000;
+	margin:0 0 10px 0;
+}
+.navigation .button::after{
+    content:'';
+	display:block;
+	height:10px;
+	border-top:4px solid #000;
+	border-bottom:4px solid #000;
+}
+.navigation .button.active::before {
+	background:#ccc;
+}
+.navigation .button.active::after {
+	border-color:#ccc;
+}
+.navigation .nav {
+	position:absolute;
+	top:0;
+	left:-100%;
+	height:100vh;
+	width:220px;
+	background:$headerBg;
+	font:1.8rem/1.5 'Arial Narrow';
+    padding: 4rem 0 0;
+	transition:left 1s ease-in;
+    text-transform: uppercase;
+    z-index: 5;
+        li{
+            padding: 0 0 1rem 0;
+            a{
+                text-decoration: none;
+                text-transform: capitalize;
+                color: #fff;
+                font: 500 1.8rem/2.2rem 'Roboto', sans-serif;
+                display: block;
+                padding: 0 0 0 1rem;
+            }
+    }
+}
+.navigation .nav li a:hover{
+    color:$headerBg;
+    background: #fff;
+}
+.navigation .nav li:last-child{
+    padding: 0;
+}
+
+.navigation .nav.active {
+	left:0;
+}
+.header .contact{
+	order: 2;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+    font: 500 1.2rem/2.2rem 'Roboto', sans-serif;
+    color: #fff;
+}
+.header .logo{
+    font: 700 1.6rem/1 'Nunito', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#fff;
+        span{
+            color: #000;
+    }
+}
+/* ------------ Main ------------*/
+.info{
+    background: url(../img/img1.jpg) center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        h1{
+            text-align: center;
+            z-index: 44;
+            font:900 2.8rem/1.5 'Roboto', sans-serif;
+            color: #fff;
+            max-width: 300px;
+            margin: 0 0 2rem;
+            
+            
+            
+        }
+        p{
+            text-align: center;
+            z-index: 44;
+            max-width:250px ;
+            font:400 1.6rem/1.5 'Roboto', sans-serif;
+            color: #fff;
+           
+        }
+    
+}
+.info h1::after{
+    display: block;
+    content: '';
+    width: 106px;
+    height: 4px;
+    background: #fff;
+    margin: 0.25rem auto 0; 
+}
+.info::after{
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, .68);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0; 
+}
+
+@media screen and (min-width:992px){
+    /*-----------header ----------*/
+	.navigation{
+	order: 3;
+	}
+	.navigation .button{
+		display: none;
+	}
+	.navigation .nav {
+	position:static;
+	width: auto;
+	height: auto;
+	background: none;
+	display: flex;
+	justify-content: space-between;
+    padding: 0;
+        li{
+            margin: 0 6.5rem 0 0;
+            padding: 0;
+                a{
+                    padding: 0;
+
+                }
+        }
+        
+	}
+    .navigation .nav li:last-child{
+        margin: 0;
+    }
+    .navigation .nav li a:hover{
+    color:#000;
+    background: none;
+
+}
+	.header .contact{
+    font: 500 1.7rem/2.2rem 'Roboto', sans-serif;
+	order: 3;
+	}
+    .header .logo{
+    font: 700 2.6rem/1 'Nunito', sans-serif;
+    }
+    /*------------Main------------*/
+    .info{
+    
+        h1{
+            font:900 7rem/1.5 'Roboto', sans-serif;
+            max-width: 750px;
+            margin:0 0 5rem;
+          
+        }
+        p{
+            max-width: 650px;
+           
+        }
+    }
+    .info h1::after{
+    margin: 2.25rem auto 0; 
+    }
+
+
+}

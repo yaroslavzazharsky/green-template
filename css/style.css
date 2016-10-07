@@ -1,0 +1,357 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, ../sass/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 10, ../sass/style.scss */
+html {
+  font-size: 62.5%;
+}
+
+/*---------Header----------*/
+/* line 16, ../sass/style.scss */
+.header {
+  background: #96db4c;
+  padding: 1.6rem 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 55;
+}
+
+/* line 25, ../sass/style.scss */
+.header .container {
+  max-width: 990px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 32, ../sass/style.scss */
+.navigation {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+/* line 35, ../sass/style.scss */
+.navigation .button {
+  display: block;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+/* line 41, ../sass/style.scss */
+.navigation .button::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: #000;
+  margin: 0 0 10px 0;
+}
+
+/* line 48, ../sass/style.scss */
+.navigation .button::after {
+  content: '';
+  display: block;
+  height: 10px;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+/* line 55, ../sass/style.scss */
+.navigation .button.active::before {
+  background: #ccc;
+}
+
+/* line 58, ../sass/style.scss */
+.navigation .button.active::after {
+  border-color: #ccc;
+}
+
+/* line 61, ../sass/style.scss */
+.navigation .nav {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 220px;
+  background: #96db4c;
+  font: 1.8rem/1.5 'Arial Narrow';
+  padding: 4rem 0 0;
+  -webkit-transition: left 1s ease-in;
+  transition: left 1s ease-in;
+  text-transform: uppercase;
+  z-index: 5;
+}
+/* line 73, ../sass/style.scss */
+.navigation .nav li {
+  padding: 0 0 1rem 0;
+}
+/* line 75, ../sass/style.scss */
+.navigation .nav li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  font: 500 1.8rem/2.2rem 'Roboto', sans-serif;
+  display: block;
+  padding: 0 0 0 1rem;
+}
+
+/* line 85, ../sass/style.scss */
+.navigation .nav li a:hover {
+  color: #96db4c;
+  background: #fff;
+}
+
+/* line 89, ../sass/style.scss */
+.navigation .nav li:last-child {
+  padding: 0;
+}
+
+/* line 93, ../sass/style.scss */
+.navigation .nav.active {
+  left: 0;
+}
+
+/* line 96, ../sass/style.scss */
+.header .contact {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font: 500 1.2rem/2.2rem 'Roboto', sans-serif;
+  color: #fff;
+}
+
+/* line 104, ../sass/style.scss */
+.header .logo {
+  font: 700 1.6rem/1 'Nunito', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 109, ../sass/style.scss */
+.header .logo span {
+  color: #000;
+}
+
+/* ------------ Main ------------*/
+/* line 114, ../sass/style.scss */
+.info {
+  background: url(../img/img1.jpg) center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 122, ../sass/style.scss */
+.info h1 {
+  text-align: center;
+  z-index: 44;
+  font: 900 2.8rem/1.5 'Roboto', sans-serif;
+  color: #fff;
+  max-width: 300px;
+  margin: 0 0 2rem;
+}
+/* line 133, ../sass/style.scss */
+.info p {
+  text-align: center;
+  z-index: 44;
+  max-width: 250px;
+  font: 400 1.6rem/1.5 'Roboto', sans-serif;
+  color: #fff;
+}
+
+/* line 143, ../sass/style.scss */
+.info h1::after {
+  display: block;
+  content: '';
+  width: 106px;
+  height: 4px;
+  background: #fff;
+  margin: 0.25rem auto 0;
+}
+
+/* line 151, ../sass/style.scss */
+.info::after {
+  display: block;
+  content: '';
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 992px) {
+  /*-----------header ----------*/
+  /* line 164, ../sass/style.scss */
+  .navigation {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  /* line 167, ../sass/style.scss */
+  .navigation .button {
+    display: none;
+  }
+
+  /* line 170, ../sass/style.scss */
+  .navigation .nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+  }
+  /* line 178, ../sass/style.scss */
+  .navigation .nav li {
+    margin: 0 6.5rem 0 0;
+    padding: 0;
+  }
+  /* line 181, ../sass/style.scss */
+  .navigation .nav li a {
+    padding: 0;
+  }
+
+  /* line 188, ../sass/style.scss */
+  .navigation .nav li:last-child {
+    margin: 0;
+  }
+
+  /* line 191, ../sass/style.scss */
+  .navigation .nav li a:hover {
+    color: #000;
+    background: none;
+  }
+
+  /* line 196, ../sass/style.scss */
+  .header .contact {
+    font: 500 1.7rem/2.2rem 'Roboto', sans-serif;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  /* line 200, ../sass/style.scss */
+  .header .logo {
+    font: 700 2.6rem/1 'Nunito', sans-serif;
+  }
+
+  /*------------Main------------*/
+  /* line 206, ../sass/style.scss */
+  .info h1 {
+    font: 900 7rem/1.5 'Roboto', sans-serif;
+    max-width: 750px;
+    margin: 0 0 5rem;
+  }
+  /* line 212, ../sass/style.scss */
+  .info p {
+    max-width: 650px;
+  }
+
+  /* line 217, ../sass/style.scss */
+  .info h1::after {
+    margin: 2.25rem auto 0;
+  }
+}
