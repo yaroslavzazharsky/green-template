@@ -274,22 +274,32 @@ $headerBg:#96db4c;
             margin: 6px;
             height: 290px;
             position: relative;
+            overflow: hidden;
                 img{
                 height: 100%;
                 width: 100%;
                     }
     }
 }
-.images li::after{
+.images li::after, .images li::before{
     display: block;
     content: '';
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .3);
     position: absolute;
     top:0;
     bottom: 0;
     right: 0;
     left: 0;
-}
+    transition:all .6s; 
+    }
+    .images li:hover::after,{
+        top: 100%;
+        
+    }
+    .images li:hover::before{
+        bottom: 100%
+    }
+
 /*------------Form------------*/
 .contacts{
     background: url(../img/img11.jpg) bottom no-repeat;
